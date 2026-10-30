@@ -1,171 +1,411 @@
+/* ==========================================================================
+   VARIABLES CSS Y CONFIGURACIÓN BASE
+   ========================================================================== */
+:root {
+    --color-primario: #0f172a;       /* Azul oscuro institucional */
+    --color-secundario: #0284c7;     /* Azul brillante de interacción */
+    --color-acento: #f59e0b;         /* Ámbar */
+    --color-fondo: #f8fafc;          /* Gris claro fondo general */
+    --color-tarjeta: rgba(255, 255, 255, 0.95);        
+    --color-texto: #1e293b;          
+    --color-texto-suave: #475569;    
+    --color-borde: #e2e8f0;          
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sombra-tarjeta: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-h1 {
-    font-size: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
 }
-header {
-    background-color: #333333;
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 0.25rem solid var(--color-acento);
+    outline-offset: 0.2rem;
+}
+
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN
+   ========================================================================== */
+.header-principal {
+    background-color: var(--color-primario);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-}
-
-header div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-header img {
-    width: 30vw;
-    border-radius: 50%;
-}
-
-
-nav {
-    margin-top: 1rem;
-    width: 100%; 
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 0.8rem; 
-    list-style: none;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.5rem 1rem; 
-    display: block; 
-    width: 100%;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ffd700; 
-}
-
-
-#hero {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     padding: 2rem 1rem;
+    text-align: center;
 }
 
-#hero h2 {
-    font-size: 1.5rem;
+.perfil-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-#hero p {
-    font-size: 1rem;
-}
-
-
-@media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-    @media (min-width: 768px) {
-    nav ul {
-        flex-direction: row; 
-        gap: 2rem;
-        justify-content: center;
-    }
-    
-    nav a {
-        width: auto; 
-        padding: 0.5rem 1rem;
-    }
-    
-    
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-    }
-    
-    nav {
-        margin-top: 0;
-        width: auto;
-         font-size: 1 rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    
-    }
-
-
-}
-/* --- Ajustes para animaciones en JS --- */
-
-header img {
-    /* Necesario para la perspectiva 3D suave */
+.foto-perfil {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.25rem solid var(--color-acento);
     transition: transform 0.15s ease-out, box-shadow 0.3s ease;
     will-change: transform;
     cursor: pointer;
 }
 
-/* Efecto de elevación al pasar por la imagen */
-header img:hover {
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+.foto-perfil:hover {
+    box-shadow: 0 0.5rem 1.25rem rgba(245, 158, 11, 0.4);
 }
 
-/* Transición suave para el magnetismo de los enlaces del menú */
-nav a {
-    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
-    display: inline-block; /* Permite transformaciones 3D */
+.titulo-principal {
+    font-size: 1.75rem;
+    font-weight: 700;
 }
-/* --- Estado inicial del Hero (oculto) --- */
+
+.subtitulo-header {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.navegacion-principal {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 40rem;
+}
+
+.lista-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    width: 100%;
+}
+
+.lista-nav li {
+    width: 100%;
+}
+
+.lista-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lista-nav a:hover {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+/* ==========================================================================
+   HERO / BIENVENIDA
+   ========================================================================== */
+.seccion-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem 1.25rem;
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid var(--color-borde);
+    text-align: center;
+}
+
+.seccion-hero h2 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+}
+
+.seccion-hero p {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+    max-width: 42rem;
+}
+
+.boton-acceso {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.2);
+}
+
+.boton-acceso:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(2, 132, 199, 0.3);
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL Y FONDOS POR ESPECIALIDAD
+   ========================================================================== */
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.seccion-especialidad {
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+/* SECCIONES CON IMÁGENES DE FONDO */
+#electromecanica {
+    background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
+                url('fondo-electromecanica.jpg') center/cover no-repeat;
+}
+
+#electronica {
+    background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
+                url('fondo-electronica.jpg') center/cover no-repeat;
+}
+
+#informatica {
+    background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
+                url('fondo-informatica.jpg') center/cover no-repeat;
+}
+
+.encabezado-seccion h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    border-bottom: 0.2rem solid var(--color-acento);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.encabezado-seccion p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.contenedor-articulos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* TARJETAS DE CONTENIDO */
+.tarjeta-tema {
+    background-color: var(--color-tarjeta);
+    border-left: 0.35rem solid var(--color-secundario);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.tarjeta-tema:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-3px);
+}
+
+.tarjeta-tema h3 {
+    font-size: 1.15rem;
+    color: var(--color-primario);
+}
+
+.tarjeta-tema p {
+    font-size: 0.92rem;
+    color: var(--color-texto);
+}
+
+.lista-proyectos {
+    margin-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+}
+
+/* BOTONES Y ENLACES */
+.enlaces-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.enlace-herramienta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.85rem;
+    background-color: #e2e8f0;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    border: 1px solid #cbd5e1;
+}
+
+.enlace-herramienta:hover {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    border-color: var(--color-secundario);
+    transform: translateY(-1px);
+}
+
+.enlace-youtube {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--color-secundario);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.enlace-youtube:hover {
+    color: var(--color-primario);
+}
+
+/* CONTENEDOR DE VIDEO */
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0.5rem auto 0 auto;
+    padding-bottom: 56.25%; /* Relación 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   ASIDE Y FOOTER
+   ========================================================================== */
+.bloque-avisos {
+    background-color: #fef3c7;
+    border: 0.0625rem solid #fde68a;
+    color: #78350f;
+    padding: 1.25rem;
+    margin: 0 auto 2rem auto;
+    max-width: 1200px;
+    width: calc(100% - 2rem);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bloque-avisos h3 {
+    font-size: 1.05rem;
+}
+
+.bloque-avisos p {
+    font-size: 0.9rem;
+}
+
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.75rem 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .lista-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .lista-nav li {
+        width: auto;
+    }
+
+    .contenedor-articulos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* ==========================================================================
+   ANIMACIONES JS
+   ========================================================================== */
 #hero h2, 
-#hero p {
+#hero p,
+#hero .boton-acceso {
     opacity: 0;
-    transform: translateY(30px); /* Desplazado 30px hacia abajo */
+    transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     will-change: opacity, transform;
 }
 
-/* Retraso sutil para el párrafo para dar efecto en cascada */
 #hero p {
     transition-delay: 0.2s; 
 }
 
-/* --- Estado final (cuando entra en pantalla) --- */
-#hero.visible h2,
-#hero.visible p {
-    opacity: 1;
-    transform: translateY(0); /* Vuelve a su posición original */
-}
-/* --- Estado inicial del Hero (oculto) --- */
-#hero h2, 
-#hero p {
-    opacity: 0;
-    transform: translateY(30px); /* Desplazado 30px hacia abajo */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
+#hero .boton-acceso {
+    transition-delay: 0.4s;
 }
 
-/* Retraso sutil para el párrafo para dar efecto en cascada */
-#hero p {
-    transition-delay: 0.2s; 
-}
-
-/* --- Estado final (cuando entra en pantalla) --- */
 #hero.visible h2,
-#hero.visible p {
+#hero.visible p,
+#hero.visible .boton-acceso {
     opacity: 1;
-    transform: translateY(0); /* Vuelve a su posición original */
+    transform: translateY(0);
 }

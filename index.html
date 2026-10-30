@@ -3,32 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Especialidades Técnicas</title>
+    <title>Prof. Bruno Nicolás Ortiz - Especialidades Técnicas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div>
-            <h1>Prof. Bruno Nicolás Ortiz</h1>
-            <img src="escuela tecnica color.jpg" alt="Foto del profesor">
+    <header class="header-principal">
+        <div class="perfil-contenedor">
+            <img src="escuela tecnica color.jpg" alt="Fotografía del profesor Bruno Nicolás Ortiz" class="foto-perfil">
+            <h1 class="titulo-principal">Prof. Bruno Nicolás Ortiz</h1>
+            <p class="subtitulo-header">Educación Técnica Secundaria | Especialidades Técnicas</p>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">Electromecánica</a></li>
-                <li><a href="#">Electrónica</a></li>
-                <li><a href="#">Informática</a></li>
+        <nav class="navegacion-principal" aria-label="Menú principal de la página">
+            <ul class="lista-nav">
+                <li><a href="#electromecanica">Electromecánica</a></li>
+                <li><a href="#electronica">Electrónica</a></li>
+                <li><a href="#informatica">Informática</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h2>Contenidos</h2>
-        <p>Bienvenidos al espacio donde encontrarán material, recursos y enlaces de interés de las materias que dicto en las especialidades Electromecánica, Electrónica e Informática.</p>
+    <section id="hero" class="seccion-hero">
+        <h2>Aulas Virtuales y Recursos Técnicos</h2>
+        <p>Bienvenidos al portal educativo. En este espacio encontrarán guías de estudio, simulaciones, proyectos integradores y enlaces de interés para los talleres y laboratorios de nuestras especialidades.</p>
+        <a href="https://classroom.google.com" target="_blank" rel="noopener noreferrer" class="boton-acceso">
+            Acceso a Google Classroom
+        </a>
     </section>
 
-    <!-- Conexión con el archivo de JavaScript -->
+    <main class="contenido-principal">
+
+        <!-- ==================== SECCIÓN 1: ELECTROMECÁNICA ==================== -->
+        <section id="electromecanica" class="seccion-especialidad">
+            <header class="encabezado-seccion">
+                <h2>Especialidad Electromecánica</h2>
+                <p>Formación práctica en instalaciones, máquinas eléctricas y mediciones en taller y laboratorio.</p>
+            </header>
+
+            <div class="contenedor-articulos">
+                <article class="tarjeta-tema">
+                    <h3>Instalaciones Eléctricas Domiciliarias</h3>
+                    <p>Diseño de circuitos eléctricos de vivienda, tableros de protección, protecciones diferenciales y térmicas según normativas AEA.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.aea.org.ar" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Normativa AEA</a>
+                        <a href="https://www.se.gob.ar" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Secretaría de Energía</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/5_7JbI78qgU" title="Instalación de Tablero Eléctrico" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=5_7JbI78qgU" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Generación y Transporte de Energía</h3>
+                    <p>Principios de transformación de energía, líneas de distribución en alta, media y baja tensión, y centrales de generación eléctrica.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.cammesa.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">CAMMESA MEM</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/pX39SjM4Lio" title="Cómo funciona la Red Eléctrica" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=pX39SjM4Lio" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Motores y Circuitos de Control</h3>
+                    <p>Funcionamiento de motores monofásicos y trifásicos. Manejo de contactores, temporizadores y esquemas de arranque "Paro y Marcha".</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.cade-simu.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Simulador CADe SIMU</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/xG2e4cQ4X3c" title="Circuito de Paro y Marcha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=xG2e4cQ4X3c" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Mediciones Eléctricas e Instrumental</h3>
+                    <p>Uso de instrumentos de medición en taller y laboratorio: multímetros digitales, pinzas amperométricas, osciloscopios y megóhmetros.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.fluke.com/es-ar/informacion/blog" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Guías Fluke</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/3f39aY6K_C4" title="Cómo usar un Multímetro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=3f39aY6K_C4" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN 2: ELECTRÓNICA ==================== -->
+        <section id="electronica" class="seccion-especialidad">
+            <header class="encabezado-seccion">
+                <h2>Especialidad Electrónica (5to y 6to Año)</h2>
+                <p>Sistemas embebidos, programación en C++, Internet de las Cosas (IoT) y diseño de PCB.</p>
+            </header>
+
+            <div class="contenedor-articulos">
+                <article class="tarjeta-tema">
+                    <h3>Programación en C++ y Sistemas Embebidos</h3>
+                    <p>Lógica de programación estructurada en C++ para microcontroladores y proyectos de hardware integrando algoritmos de Inteligencia Artificial.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://cppreference.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Documentación C++</a>
+                        <a href="https://www.arduino.cc" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Arduino Reference</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/aR-a-R9aCNo" title="Programación C++ para Arduino" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=aR-a-R9aCNo" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Sistemas Digitales</h3>
+                    <p>Estudio de conversores A/D y D/A, registros de desplazamiento, contadores y circuitos lógicos secuenciales.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.falstad.com/circuit/" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Simulador Falstad</a>
+                        <a href="https://www.alldatasheet.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Datasheets AllDataSheet</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/N2QxUeR93gM" title="Sistemas Digitales" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=N2QxUeR93gM" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Sensores y Control de Potencia</h3>
+                    <p>Acondicionamiento de señales de sensores industriales y etapas de control de cargas de potencia mediante tiristores, TRIACs y optoacopladores.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.sparkfun.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Tutoriales SparkFun</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/4n3s_6aUjIs" title="Control de Potencia TRIAC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=4n3s_6aUjIs" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Diseño PCB (EasyEDA) e Internet de las Cosas (IoT)</h3>
+                    <p>Modelado de esquemas y ruteo de placas de circuito impreso (PCB) con EasyEDA, junto al desarrollo de nodos IoT para monitoreo remoto con ESP32.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://easyeda.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Plataforma EasyEDA</a>
+                        <a href="https://blynk.io" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Blynk IoT Platform</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/3uPz8gQ8z90" title="Diseño de PCB en EasyEDA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=3uPz8gQ8z90" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN 3: INFORMÁTICA ==================== -->
+        <section id="informatica" class="seccion-especialidad">
+            <header class="encabezado-seccion">
+                <h2>Especialidad Informática (6to Año)</h2>
+                <p>Laboratorio de Sistemas Operativos, Redes, Bases de Datos e Inteligencia Artificial Aplicada.</p>
+            </header>
+
+            <div class="contenedor-articulos">
+                <article class="tarjeta-tema">
+                    <h3>Redes de Computadoras</h3>
+                    <p>Fundamentos de networking, direccionamiento IP, modelos OSI y TCP/IP, subredes y configuración de servicios de red.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.netacad.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Cisco Networking Academy</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/J8f7R7yX_8Y" title="Modelo OSI y TCP/IP" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=J8f7R7yX_8Y" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Bases de Datos Relacionales (SQLite)</h3>
+                    <p>Diseño de modelos entidad-relación, creación de tablas y consultas complejas utilizando lenguaje SQL con la librería ligera SQLite.</p>
+                    <div class="enlaces-flex">
+                        <a href="https://www.sqlite.org/index.html" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Documentación SQLite</a>
+                        <a href="https://sqlitebrowser.org" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">DB Browser SQLite</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/vN9S6f4k2R8" title="Curso SQLite desde cero" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=vN9S6f4k2R8" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+
+                <article class="tarjeta-tema">
+                    <h3>Introducción a IA y Proyectos Integradores</h3>
+                    <p>Desarrollo de proyectos reales en Python utilizando Google Colab y la API de Google AI Studio. Proyectos destacados del curso:</p>
+                    <ul class="lista-proyectos">
+                        <li>Sistema de control de stock y facturación comercial con base de datos integrada.</li>
+                        <li>Asistente virtual institucional con interfaz visual y comandos por voz.</li>
+                    </ul>
+                    <div class="enlaces-flex">
+                        <a href="https://colab.research.google.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Google Colab</a>
+                        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="enlace-herramienta">Google AI Studio</a>
+                    </div>
+                    <div class="contenedor-video">
+                        <iframe src="https://www.youtube.com/embed/W8e11a3s-8E" title="APIs de IA en Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=W8e11a3s-8E" target="_blank" rel="noopener noreferrer" class="enlace-youtube">Ver directamente en YouTube ↗</a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <aside class="bloque-avisos">
+        <h3>Avisos Importantes de Cursada</h3>
+        <p>Recuerden revisar las fechas de entrega de proyectos en Google Classroom y cumplir con las normas de seguridad e higiene en talleres e institutos.</p>
+    </aside>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Prof. Bruno Nicolás Ortiz - Dirección de Tecnología Educativa (Región 19)</p>
+        <p>Sitio Web Educativo | Formación Profesional Técnica</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
